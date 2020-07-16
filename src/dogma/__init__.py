@@ -6,4 +6,8 @@ import sys
 
 assert sys.version_info >= (3, 6), "Dogma requires Python 3.6+"
 
-__all__ = []
+from .angle import Angle
+
+__all__ = [
+    'Angle',
+]

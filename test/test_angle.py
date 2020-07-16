@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 # This is free and unencumbered software released into the public domain.
 
-"""Test cases for the dogma module."""
+"""Test cases for the dogma.angle module."""
 
-from dogma import *
+from dogma import Angle
+
+def test_radians():
+    assert(Angle(2).radians == 2)
 
 if __name__ == '__main__':
     import pytest, sys
