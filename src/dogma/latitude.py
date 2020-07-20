@@ -1,5 +1,7 @@
 # This is free and unencumbered software released into the public domain.
 
+"""The dogma.Latitude class."""
+
 from .angle import Angle
 
 # See: https://dogma.dev/Latitude/

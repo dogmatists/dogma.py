@@ -18,3 +18,4 @@ jobs:
         env:
           VALIDATE_MD: true
           VALIDATE_YAML: true
+          VALIDATE_PYTHON: true

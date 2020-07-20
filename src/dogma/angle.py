@@ -1,5 +1,7 @@
 # This is free and unencumbered software released into the public domain.
 
+"""The dogma.Angle class."""
+
 import math
 
 from typing import Optional
@@ -10,7 +12,12 @@ class Angle:
 
     _radians: float
 
-    def __init__(self, degrees: Optional[float] = None, radians: Optional[float] = None, turns: Optional[float] = None) -> None:
+    def __init__(
+            self,
+            degrees: Optional[float] = None,
+            radians: Optional[float] = None,
+            turns: Optional[float] = None,
+    ) -> None:
         if radians is not None:
             self._radians = float(radians)
         elif degrees is not None:
