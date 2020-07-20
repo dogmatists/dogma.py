@@ -4,9 +4,16 @@
 """Test cases for the dogma.Latitude class."""
 
 from dogma import Latitude
+from pytest import raises
 
-def test_radians():
-    assert(Latitude(2).radians == 2)
+def test_ctor():
+    assert(Latitude(0).degrees == 0)
+    assert(Latitude(-90).degrees == -90)
+    assert(Latitude(90).degrees == 90)
+    with raises(ValueError):
+        Latitude(-91)
+    with raises(ValueError):
+        Latitude(91)
 
 if __name__ == '__main__':
     import pytest, sys

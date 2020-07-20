@@ -4,9 +4,16 @@
 """Test cases for the dogma.Longitude class."""
 
 from dogma import Longitude
+from pytest import raises
 
-def test_radians():
-    assert(Longitude(2).radians == 2)
+def test_ctor():
+    assert(Longitude(0).degrees == 0)
+    assert(Longitude(-180).degrees == -180)
+    assert(Longitude(180).degrees == 180)
+    with raises(ValueError):
+        Longitude(-181)
+    with raises(ValueError):
+        Longitude(181)
 
 if __name__ == '__main__':
     import pytest, sys
