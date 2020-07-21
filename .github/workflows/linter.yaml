@@ -4,8 +4,18 @@ name: Linter
 on:
   push:
     branches: [master]
+    paths:
+      - '**.md'
+      - '**.py'
+      - '**.yaml'
+      - '**.yml'
   pull_request:
     branches: [master]
+    paths:
+      - '**.md'
+      - '**.py'
+      - '**.yaml'
+      - '**.yml'
 jobs:
   lint:
     name: Lint code base
