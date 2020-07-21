@@ -19,8 +19,10 @@ jobs:
           python-version: 3.8
       - name: Install dependencies
         uses: py-actions/py-dependency-install@v2.0.2
-      - name: Lint code base
+      - name: Lint Markdown and YAML files
         uses: docker://github/super-linter:v3.3.0
         env:
           VALIDATE_MD: true
           VALIDATE_YAML: true
+      - name: Lint Python source code
+        uses: py-actions/flake8@v1

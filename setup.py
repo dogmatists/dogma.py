@@ -6,7 +6,6 @@
 from codecs import open
 from os import path
 from setuptools import setup, find_packages
-from shutil import copyfile
 
 def readfile(*filepath):
     with open(path.join(*filepath), encoding='utf-8') as f:
@@ -48,5 +47,5 @@ setup(
     package_dir={'': 'src'},
     install_requires=[],
     python_requires='~=3.6',
-    extras_require={'test': ['pytest'],},
+    extras_require={'test': ['pytest']},
 )
