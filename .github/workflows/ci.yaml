@@ -5,14 +5,17 @@ jobs:
   test:
     name: Run unit tests
     runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7, 3.8]
     steps:
       - name: Clone repository
         uses: actions/checkout@v2
-      - name: Set up Python
+      - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
-          python-version: 3.8
+          python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         uses: py-actions/py-dependency-install@v2.0.2
       - name: Run the test suite
-        run: PYTHONPATH=src pytest
+        run: tox -e py
