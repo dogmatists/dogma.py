@@ -4,7 +4,7 @@
 
 from .angle import Angle
 
-# See: https://dogma.dev/Longitude/
+# See: https://dogma.dev/Longitude
 class Longitude(Angle):
     """A longitude."""
 

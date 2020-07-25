@@ -6,7 +6,7 @@ import math
 
 from typing import Optional
 
-# See: https://dogma.dev/Angle/
+# See: https://dogma.dev/Angle
 class Angle:
     """An angle."""
 
