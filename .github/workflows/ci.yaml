@@ -16,6 +16,6 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
-        uses: py-actions/py-dependency-install@v2.0.2
+        uses: py-actions/py-dependency-install@v2.1.0
       - name: Run the test suite
         run: tox -e py
