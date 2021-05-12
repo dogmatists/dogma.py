@@ -35,4 +35,4 @@ jobs:
           VALIDATE_MD: true
           VALIDATE_YAML: true
       - name: Lint Python source code
-        uses: py-actions/flake8@v1
+        uses: py-actions/flake8@v1.1.0
