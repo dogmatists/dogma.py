@@ -28,7 +28,7 @@ jobs:
         with:
           python-version: 3.8
       - name: Install dependencies
-        uses: py-actions/py-dependency-install@v2.1.0
+        uses: py-actions/py-dependency-install@v3.0.0
       - name: Lint Markdown and YAML files
         uses: docker://github/super-linter:v3.3.0
         env:
